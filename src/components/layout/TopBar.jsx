@@ -7,16 +7,16 @@ const TopBar = () => {
         <div className="flex items-center space-x-4">
           <div className="flex items-center text-sm">
             <Clock className="h-4 w-4 mr-2" />
-            <span>Mon-Fri: 7:30AM-6PM</span>
+            <span>Mon-Sat: 8:30AM-6PM</span>
           </div>
           <div className="flex items-center text-sm">
             <MapPin className="h-4 w-4 mr-2" />
-            <span>123 Auto Drive, Dallas TX</span>
+            <span> 3901 Broadway Blvd, Garland, TX 75043</span>
           </div>
         </div>
         <div className="flex items-center text-sm">
           <Phone className="h-4 w-4 mr-2" />
-          <span className="font-bold">Call Us: (555) 123-4567</span>
+          <span className="font-bold">Call Us: (972) 271-0009</span>
         </div>
       </div>
     </div>
