@@ -8,9 +8,9 @@ import Azmat from '../../assets/images/Azmat.png';
 import Lawrence from '../../assets/images/Lawrence.png';
 import Moody from '../../assets/images/Moody.png';
 import Red from '../../assets/images/Red.png';
-
-
-
+import Penoral from '../../assets/images/Penoral.png';
+import R from '../../assets/images/R.png';
+import Pervaiz from '../../assets/images/Pervaiz.png';
 
 const TestimonialsSection = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -58,7 +58,7 @@ const TestimonialsSection = () => {
       formattedDate: "Mar 20, 2021",
       rating: 5,
       content: "Amazing service! Always reliable and trustworthy.",
-      image: GoogleAvatar,
+      image: Penoral,
       verified: true,
     },
     {
@@ -74,7 +74,7 @@ const TestimonialsSection = () => {
       date: "December 25, 2023",
       rating: 5,
       content: "Honest person Kamran. I’m satisfied.",
-      image: GoogleAvatar,
+      image: R,
       verified: true
     },
     {
@@ -90,7 +90,7 @@ const TestimonialsSection = () => {
       date: "May 9, 2024",
       rating: 5,
       content: "Awesome place. Friendly and experienced. Very economical.",
-      image: GoogleAvatar,
+      image: Pervaiz,
       verified: true
     }
   ];
