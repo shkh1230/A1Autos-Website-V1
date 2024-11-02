@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { ChevronRight } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import TestimonialsSection from '../components/sections/TestimonialsSection';
 
 const HomePage = () => {
   useEffect(() => {
@@ -97,6 +98,9 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* CTA Section */}
       <div className="bg-red-600 text-white py-16">
