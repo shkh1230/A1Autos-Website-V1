@@ -17,7 +17,7 @@ const TiresAlignment = () => {
 
         {/* Hero Section */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tires & Alignment Services</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tires and Alignment Services</h1>
           <p className="text-xl text-gray-600">
             Professional tire services and wheel alignment expertise to maximize your vehicle's performance, 
             handling, and tire life. We provide comprehensive tire care and precision alignment services.

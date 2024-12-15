@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Wrench, ShieldCheck, AlertCircle } from 'lucide-react';
 
-const SteeringSuspension = () => {
+const EnginesTransmissions = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
@@ -12,15 +12,15 @@ const SteeringSuspension = () => {
           <ChevronRight className="h-4 w-4 mx-2" />
           <Link to="/services" className="hover:text-red-600">Services</Link>
           <ChevronRight className="h-4 w-4 mx-2" />
-          <span className="text-gray-900">Steering & Suspension Services</span>
+          <span className="text-gray-900">Engines and Transmissions Services</span>
         </div>
 
         {/* Hero Section */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Steering and Suspension Services</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Engines and Transmissions Services</h1>
           <p className="text-xl text-gray-600">
-            Expert steering and suspension repair services to ensure your vehicle handles safely and comfortably on the road. 
-            We diagnose and fix all steering and suspension issues using state-of-the-art equipment.
+            Expert diagnostics and repair services for your vehicle's engine and transmission systems. 
+            Our certified technicians provide comprehensive solutions for all powertrain issues.
           </p>
         </div>
 
@@ -32,12 +32,15 @@ const SteeringSuspension = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              'Uneven tire wear',
-              'Vehicle pulling to one side',
-              'Vibrating steering wheel',
-              'Bouncy or rough ride',
-              'Squealing during turns',
-              'Difficulty steering'
+              'Check Engine Light On',
+              'Transmission Slipping',
+              'Rough Idle or Stalling',
+              'Unusual Engine Noises',
+              'Delayed Gear Engagement',
+              'Loss of Power',
+              'Transmission Fluid Leaks',
+              'Engine Overheating',
+              'Poor Fuel Economy'
             ].map((issue, index) => (
               <div key={index} className="flex items-center bg-gray-50 p-4 rounded-lg">
                 <ChevronRight className="h-5 w-5 text-red-600 mr-2" />
@@ -56,28 +59,28 @@ const SteeringSuspension = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
-                name: 'Power Steering Service',
-                description: 'Complete inspection and repair of power steering components, fluid exchange, and system testing'
+                name: 'Engine Diagnostics',
+                description: 'Advanced computer diagnostics to identify engine issues and performance problems'
               },
               {
-                name: 'Shock Absorber Replacement',
-                description: 'Professional replacement of worn shock absorbers to restore ride comfort and handling'
+                name: 'Engine Repair',
+                description: 'Complete engine repair services including timing belts, gaskets, and major components'
               },
               {
-                name: 'Strut Assembly Service',
-                description: 'Comprehensive strut replacement including mounts and bearings'
+                name: 'Transmission Service',
+                description: 'Routine maintenance including fluid changes and filter replacements'
               },
               {
-                name: 'Ball Joint Replacement',
-                description: 'Precision replacement of worn ball joints to improve steering control'
+                name: 'Transmission Repair',
+                description: 'Expert repair of automatic and manual transmission systems'
               },
               {
-                name: 'Control Arm Service',
-                description: 'Inspection and replacement of control arms and bushings'
+                name: 'Engine Tune-Up',
+                description: 'Comprehensive tune-up service to restore performance and efficiency'
               },
               {
-                name: 'Tie Rod Replacement',
-                description: 'Expert replacement of inner and outer tie rods for improved steering response'
+                name: 'Clutch Service',
+                description: 'Inspection and repair of clutch components for manual transmissions'
               }
             ].map((item, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-4 hover:border-red-600 transition-colors duration-300">
@@ -97,20 +100,20 @@ const SteeringSuspension = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
-                title: 'Enhanced Safety',
-                description: 'Properly functioning steering and suspension systems are crucial for vehicle control'
+                title: 'Improved Performance',
+                description: 'Restore your vehicles power and efficiency with expert engine services'
               },
               {
-                title: 'Improved Comfort',
-                description: 'Smoother ride and better handling on all road surfaces'
+                title: 'Extended Vehicle Life',
+                description: 'Regular maintenance helps prevent major repairs and extends vehicle longevity'
               },
               {
-                title: 'Extended Tire Life',
-                description: 'Prevent premature tire wear from misalignment and suspension issues'
+                title: 'Better Fuel Economy',
+                description: 'Properly maintained engines and transmissions optimize fuel consumption'
               },
               {
-                title: 'Better Performance',
-                description: 'Responsive steering and optimal road handling capabilities'
+                title: 'Reliable Operation',
+                description: 'Ensure smooth and dependable vehicle operation for years to come'
               }
             ].map((benefit, index) => (
               <div key={index} className="flex items-start">
@@ -129,7 +132,7 @@ const SteeringSuspension = () => {
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-2xl font-bold mb-2">Warranty Information</h2>
-              <p className="text-gray-300">24-month/24,000-mile warranty on all steering and suspension repairs</p>
+              <p className="text-gray-300">12-month/12,000-mile warranty on all engine and transmission repairs</p>
             </div>
             <ShieldCheck className="h-16 w-16 text-red-600" />
           </div>
@@ -138,7 +141,7 @@ const SteeringSuspension = () => {
         {/* CTA Section */}
         <div className="bg-red-600 text-white rounded-lg shadow-lg p-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Schedule Your Service?</h2>
-          <p className="text-lg mb-6">Our expert technicians are here to help with your steering and suspension needs.</p>
+          <p className="text-lg mb-6">Our expert technicians are here to help with all your engine and transmission needs.</p>
           <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-300">
             Schedule Service Now
           </button>
@@ -148,4 +151,4 @@ const SteeringSuspension = () => {
   );
 };
 
-export default SteeringSuspension;
+export default EnginesTransmissions;
