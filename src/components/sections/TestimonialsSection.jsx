@@ -138,7 +138,7 @@ const TestimonialsSection = () => {
                   <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <p className="text-lg font-semibold mt-2">4.3 out of 5 based on 100+ reviews</p>
+              <p className="text-lg font-semibold mt-2">4.5 out of 5 based on 100+ reviews</p>
             </div>
           </div>
         </div>
