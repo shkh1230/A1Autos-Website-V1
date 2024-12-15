@@ -4,10 +4,10 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 
 const serviceCategories = {
   'AUTO CARE': [
-    'Steering & Suspension',
+    'Steering and Suspension',
     'Tires and Alignment',
-    'Brake Pads & Rotors',
-    'Engines & Transmissions',
+    'Brake Pads and Rotors',
+    'Engines and Transmissions',
     'Fleet Services',
     'Air Filters',
     'Drive Train Repairs',
@@ -22,7 +22,7 @@ const serviceCategories = {
     'Scheduled Maintenance',
     'Fluid Exchanges',
     'Check Engine Lights',
-    'Car Battery & Electrical',
+    'Car Battery and Electrical',
     'Fuel System Cleaning',
     'Engine Cooling System'
   ],
