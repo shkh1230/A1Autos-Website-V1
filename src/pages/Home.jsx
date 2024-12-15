@@ -1,8 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useState} from 'react';
 import { ChevronRight } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import TestimonialsSection from '../components/sections/TestimonialsSection';
+import AutoShopBG from '/src/assets/images/auto-shop-bg.jpeg';
+import { TypeAnimation } from 'react-type-animation';
 
 const HomePage = () => {
   useEffect(() => {
@@ -12,21 +14,46 @@ const HomePage = () => {
       offset: 100,
       easing: 'ease-in-out',
     });
-  }, []);
+  }, []);  
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <div className="bg-gray-900 text-white py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl" data-aos="fade-up">
-            <h1 className="text-5xl font-bold mb-6">
-              Expert Auto Repair You Can Trust
-            </h1>
+     {/* Hero Section */}
+      <div className="relative bg-gray-900 text-white py-24">
+        {/* Background image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center z-0"
+          style={{ backgroundImage: `url(${AutoShopBG})` }}
+        >
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+        
+        {/* Content - now with relative positioning to appear above the background */}
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-2xl mx-auto text-center" data-aos="fade-up">
+            <div className="text-4xl md:text-5xl font-bold mb-6">
+              <TypeAnimation
+                sequence={[
+                  'Expert Auto Repair You Can Trust',
+                  1000,
+                  'Professional Car Maintenance',
+                  1000,
+                  'Quality Service Guaranteed',
+                  1000,
+                  'Your Trusted Auto Care Partner',
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{ display: 'inline-block' }}
+                repeat={Infinity}
+              />
+            </div>
             <p className="text-xl mb-8">
               Professional auto repair and maintenance services to keep your vehicle running at its best.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center">
               <button className="bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors duration-300">
                 Schedule Service
               </button>
