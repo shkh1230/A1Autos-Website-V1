@@ -1,4 +1,3 @@
-// src/routes.jsx
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
@@ -7,9 +6,10 @@ import Booking from './pages/Booking';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Services from './pages/services';
-import AutoCare from './pages/services/auto-care';
-import Maintenance from './pages/services/maintenance';
-import Inspections from './pages/services/inspections';
+
+// Auto Care Services
+import SteeringSuspension from './pages/services/auto-care/SteeringSuspension';
+import TiresAlignment from './pages/services/auto-care/TiresAlignment';
 
 export const router = createBrowserRouter([
   {
@@ -23,20 +23,10 @@ export const router = createBrowserRouter([
       { path: 'contact', element: <Contact /> },
       { 
         path: 'services',
-        element: <Services />,
         children: [
-          {
-            path: 'auto-care',
-            element: <AutoCare />
-          },
-          {
-            path: 'maintenance',
-            element: <Maintenance />
-          },
-          {
-            path: 'inspections',
-            element: <Inspections />
-          }
+          { index: true, element: <Services /> },
+          { path: 'steering-and-suspension', element: <SteeringSuspension /> },
+          { path: 'tires-and-alignment', element: <TiresAlignment /> }
         ]
       }
     ]

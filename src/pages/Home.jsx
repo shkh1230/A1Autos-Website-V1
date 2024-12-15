@@ -17,22 +17,22 @@ const HomePage = () => {
   }, []);  
 
   return (
-    <div className="min-h-screen">
-     {/* Hero Section */}
-      <div className="relative bg-gray-900 text-white py-24">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-blue-50">
+      {/* Hero Section - Lowered z-index */}
+      <div className="relative bg-gray-900 text-white py-24 z-0">
         {/* Background image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center z-0"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${AutoShopBG})` }}
         >
-          {/* Dark overlay for better text readability */}
+          {/* Dark overlay */}
           <div className="absolute inset-0 bg-black opacity-60"></div>
         </div>
         
-        {/* Content - now with relative positioning to appear above the background */}
+        {/* Content */}
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl mx-auto text-center" data-aos="fade-up">
-            <div className="text-4xl md:text-5xl font-bold mb-6">
+            <div className="text-3xl md:text-4xl font-bold mb-6">
               <TypeAnimation
                 sequence={[
                   'Expert Auto Repair You Can Trust',
@@ -66,7 +66,7 @@ const HomePage = () => {
       </div>
 
       {/* Services Section */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-slate-100 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-up">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -94,7 +94,7 @@ const HomePage = () => {
       </div>
 
       {/* Features Section */}
-      <div className="bg-white py-16">
+      <div className="bg-blue-50 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-up">Why Choose Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -114,7 +114,7 @@ const HomePage = () => {
             ].map((feature, index) => (
               <div 
                 key={feature.title} 
-                className="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center"
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
