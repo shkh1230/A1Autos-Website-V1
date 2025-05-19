@@ -539,15 +539,15 @@ const AboutPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link to="/booking">
-                <Button variant="white" size="lg">
+                <Button variant="default" size="lg">
                   Schedule Service
                 </Button>
               </Link>
               <Link to="/contact">
                 <Button
-                  variant="outline"
+                  variant="default"
                   size="lg"
-                  className="border-white text-white hover:bg-white hover:text-primary"
+                  className="border-white text-white hover:text-primary"
                 >
                   Contact Us
                 </Button>
