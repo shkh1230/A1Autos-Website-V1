@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter, PenToolIcon as Tool, ArrowRight, Wrench } from "lucide-react"
-import Logo from "./Logo"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()

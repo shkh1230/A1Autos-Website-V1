@@ -12,16 +12,6 @@ const TopBar = () => {
 
   return (
     <div className="bg-auto-gradient-2 text-gray-100 py-3 shadow-md relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-8 h-8">
-          <Tool className="w-8 h-8" />
-        </div>
-        <div className="absolute bottom-0 right-1/4 w-6 h-6">
-          <Tool className="w-6 h-6" />
-        </div>
-      </div>
-
       <div className="container mx-auto px-4 flex flex-wrap justify-between items-center relative z-10">
         <div className="flex flex-wrap items-center space-x-6">
           <motion.div

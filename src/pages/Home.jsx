@@ -13,6 +13,7 @@ import AutoShopBG from "/src/assets/images/auto-shop-bg.jpeg"
 import {motion} from "framer-motion";
 import {MapPin} from "lucide-react";
 import {Link} from "react-router-dom";
+import CarLogos from "@components/layout/CarLogos.jsx";
 
 const HomePage = () => {
   useEffect(() => {
@@ -26,6 +27,10 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+
+      {/* Logo Section */}
+      <CarLogos />
+
       {/* Hero Section */}
       <HeroSection backgroundImage={AutoShopBG} />
 
