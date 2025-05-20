@@ -89,7 +89,7 @@ const AboutPage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-900 via-black to-gray-800 text-white py-24 relative overflow-hidden">
+      <section className="bg-gradient-to-r from-gray-900 to-red-900 text-white py-24 relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
@@ -143,7 +143,7 @@ const AboutPage = () => {
                   expertise in all makes and models, from domestic to foreign vehicles.
                 </p>
                 <p>
-                  While we've grown over the years, our core values remain the same. We treat every vehicle as if it
+                  While we&#39;ve grown over the years, our core values remain the same. We treat every vehicle as if it
                   were our own, and every customer as part of the A-1 Autos family.
                 </p>
               </div>
@@ -190,7 +190,7 @@ const AboutPage = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
-            {coreValues.map((value, index) => (
+            {coreValues.map((value, ) => (
               <motion.div
                 key={value.title}
                 variants={itemVariants}
@@ -276,12 +276,12 @@ const AboutPage = () => {
               <div className="space-y-4 text-gray-700">
                 <p>
                   Our modern 5,000 square foot facility is equipped with the latest diagnostic equipment and tools to
-                  handle all your automotive needs. We've invested in technology that allows us to accurately diagnose
-                  and repair today's complex vehicles.
+                  handle all your automotive needs. We&#39;ve invested in technology that allows us to accurately diagnose
+                  and repair today&#39;s complex vehicles.
                 </p>
                 <p>
                   Our shop features 6 service bays, a comfortable customer waiting area with complimentary Wi-Fi and
-                  refreshments, and a dedicated space for our service advisors to discuss your vehicle's needs in
+                  refreshments, and a dedicated space for our service advisors to discuss your vehicle&#39;s needs in
                   detail.
                 </p>
                 <p>
@@ -402,7 +402,7 @@ const AboutPage = () => {
               <div className="w-20 h-1 bg-primary mb-6 rounded-full"></div>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  At A-1 Autos, we believe in giving back to the community that has supported us. We're proud to be
+                  At A-1 Autos, we believe in giving back to the community that has supported us. We&#39;re proud to be
                   active participants in local initiatives and organizations that make Garland a better place to live
                   and work.
                 </p>
@@ -445,7 +445,7 @@ const AboutPage = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-4 font-display">Visit Our Shop</h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Conveniently located in Garland, TX, we're here to serve all your automotive needs.
+              Conveniently located in Garland, TX, we&#39;re here to serve all your automotive needs.
             </p>
           </div>
 
