@@ -1,7 +1,7 @@
 "use client"
 
-import { Clock, MapPin, Phone, PenToolIcon as Tool } from "lucide-react"
-import { formatPhoneNumber } from "../../utils/helpers"
+import { Clock, MapPin, Phone } from "lucide-react"
+import { formatPhoneNumber } from "@utils/helpers.js"
 import { motion } from "framer-motion"
 
 const TopBar = () => {
