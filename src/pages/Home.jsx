@@ -56,7 +56,7 @@ const HomePage = () => {
                     <h2 className="text-3xl font-bold text-gray-900 mb-4 font-display">Visit Our Shop</h2>
                     <div className="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Conveniently located in Garland, TX, we're here to serve all your automotive needs.
+                        Conveniently located in Garland, TX, we&#39;re here to serve all your automotive needs.
                     </p>
                 </div>
 

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const serviceCategories = {
@@ -36,10 +36,15 @@ const serviceCategories = {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const navigate = useNavigate();
 
   const formatServiceUrl = (service) => {
-    // This will convert "Steering & Suspension" to "steering-and-suspension"
     return service.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-');
+  };
+
+  const handleServicesClick = () => {
+    navigate('/services');
+    setIsServicesOpen(false);
   };
 
   return (
@@ -70,11 +75,14 @@ const Navbar = () => {
 
               {/* Services Dropdown */}
               <div
-                  className="group"
+                  className="group relative"
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
               >
-                <button className="flex items-center nav-link hover:text-red-600 transition-colors duration-200">
+                <button
+                    onClick={handleServicesClick}
+                    className="flex items-center nav-link hover:text-red-600 transition-colors duration-200"
+                >
                   Services <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
 
@@ -95,6 +103,7 @@ const Navbar = () => {
                                   <Link
                                       to={`/services/${formatServiceUrl(service)}`}
                                       className="text-gray-600 hover:text-red-600 hover:bg-red-50 block px-3 py-2 rounded transition-colors duration-200"
+                                      onClick={() => setIsServicesOpen(false)}
                                   >
                                     {service}
                                   </Link>
@@ -103,6 +112,17 @@ const Navbar = () => {
                           </ul>
                         </div>
                     ))}
+                  </div>
+
+                  {/* View All Services Link */}
+                  <div className="border-t border-gray-200 p-4">
+                    <Link
+                        to="/services"
+                        className="block text-center text-red-600 font-semibold hover:text-red-700 transition-colors duration-200"
+                        onClick={() => setIsServicesOpen(false)}
+                    >
+                      View All Services →
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -134,23 +154,47 @@ const Navbar = () => {
           {/* Mobile Menu */}
           {isOpen && (
               <div className="md:hidden py-4">
-                <Link to="/" className="block py-2 text-gray-700 hover:text-red-600 transition-colors duration-200">
+                <Link
+                    to="/"
+                    className="block py-2 text-gray-700 hover:text-red-600 transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                >
                   Home
                 </Link>
-                <Link to="/services" className="block py-2 text-gray-700 hover:text-red-600 transition-colors duration-200">
+                <Link
+                    to="/services"
+                    className="block py-2 text-gray-700 hover:text-red-600 transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                >
                   Services
                 </Link>
-                <Link to="/about" className="block py-2 text-gray-700 hover:text-red-600 transition-colors duration-200">
+                <Link
+                    to="/about"
+                    className="block py-2 text-gray-700 hover:text-red-600 transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                >
                   About
                 </Link>
-                <Link to="/contact" className="block py-2 text-gray-700 hover:text-red-600 transition-colors duration-200">
+                <Link
+                    to="/contact"
+                    className="block py-2 text-gray-700 hover:text-red-600 transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                >
                   Contact
                 </Link>
-                <Link to="/careers" className="block py-2 text-gray-700 hover:text-red-600 transition-colors duration-200">
+                <Link
+                    to="/careers"
+                    className="block py-2 text-gray-700 hover:text-red-600 transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                >
                   Careers
                 </Link>
                 <button className="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors duration-300 w-full mt-4">
-                  <Link to="/booking" className="block w-full h-full">
+                  <Link
+                      to="/booking"
+                      className="block w-full h-full"
+                      onClick={() => setIsOpen(false)}
+                  >
                     Schedule Service
                   </Link>
                 </button>
