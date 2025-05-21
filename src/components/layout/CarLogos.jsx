@@ -1,34 +1,58 @@
 "use client"
 
 import { motion } from "framer-motion"
+// Import all logo images
+import acuraLogo from "../../assets/images/car_logos/acura.png";
+import audiLogo from "../../assets/images/car_logos/audi.png";
+import maybachLogo from "../../assets/images/car_logos/maybach.png";
+import bmwLogo from "../../assets/images/car_logos/bmw.png";
+import bmwMLogo from "../../assets/images/car_logos/bmw-m.png";
+import chevroletLogo from "../../assets/images/car_logos/chevrolet.png";
+import fordLogo from "../../assets/images/car_logos/ford.png";
+import gmcLogo from "../../assets/images/car_logos/gmc.png";
+import hondaLogo from "../../assets/images/car_logos/honda.png";
+import hyundaiLogo from "../../assets/images/car_logos/hyundai.png";
+import infinitiLogo from "../../assets/images/car_logos/infiniti.png";
+import jeepLogo from "../../assets/images/car_logos/jeep.png";
+import kiaLogo from "../../assets/images/car_logos/kia.png";
+import lexusLogo from "../../assets/images/car_logos/lexus.png";
+import mazdaLogo from "../../assets/images/car_logos/mazda.png";
+import mercedesBenzLogo from "../../assets/images/car_logos/mercedes-benz.png";
+import mercedesAMGLogo from "../../assets/images/car_logos/mercedes-amg.png";
+import nissanLogo from "../../assets/images/car_logos/nissan.png";
+import ramLogo from "../../assets/images/car_logos/ram.png";
+import subaruLogo from "../../assets/images/car_logos/subaru.png";
+import toyotaLogo from "../../assets/images/car_logos/toyota.png";
+import volkswagenLogo from "../../assets/images/car_logos/volkswagen.png";
+import volvoLogo from "../../assets/images/car_logos/volvo.png";
 
 const CarLogos = () => {
   // Car manufacturers we service - using actual logo images
-  const carBrands = [
-    { name: "Acura", logo: "/src/assets/images/car_logos/acura.png" },
-    { name: "Audi", logo: "/src/assets/images/car_logos/audi.png" },
-    { name: "Maybach", logo: "/src/assets/images/car_logos/maybach.png" },
-    { name: "BMW", logo: "/src/assets/images/car_logos/bmw.png" },
-    { name: "BMW-M", logo: "/src/assets/images/car_logos/bmw-m.png" },
-    { name: "Chevrolet", logo: "/src/assets/images/car_logos/chevrolet.png" },
-    { name: "Ford", logo: "/src/assets/images/car_logos/ford.png" },
-    { name: "GMC", logo: "/src/assets/images/car_logos/gmc.png" },
-    { name: "Honda", logo: "/src/assets/images/car_logos/honda.png" },
-    { name: "Hyundai", logo: "/src/assets/images/car_logos/hyundai.png" },
-    { name: "Infiniti", logo: "/src/assets/images/car_logos/infiniti.png" },
-    { name: "Jeep", logo: "/src/assets/images/car_logos/jeep.png" },
-    { name: "Kia", logo: "/src/assets/images/car_logos/kia.png" },
-    { name: "Lexus", logo: "/src/assets/images/car_logos/lexus.png" },
-    { name: "Mazda", logo: "/src/assets/images/car_logos/mazda.png" },
-    { name: "Mercedes-Benz", logo: "/src/assets/images/car_logos/mercedes-benz.png" },
-    { name: "Mercedes-AMG", logo: "/src/assets/images/car_logos/mercedes-amg.png" },
-    { name: "Nissan", logo: "/src/assets/images/car_logos/nissan.png" },
-    { name: "Ram", logo: "/src/assets/images/car_logos/ram.png" },
-    { name: "Subaru", logo: "/src/assets/images/car_logos/subaru.png" },
-    { name: "Toyota", logo: "/src/assets/images/car_logos/toyota.png" },
-    { name: "Volkswagen", logo: "/src/assets/images/car_logos/volkswagen.png" },
-    { name: "Volvo", logo: "/src/assets/images/car_logos/volvo.png" },
-  ]
+    const carBrands = [
+        { name: "Acura", logo: acuraLogo },
+        { name: "Audi", logo: audiLogo },
+        { name: "Maybach", logo: maybachLogo },
+        { name: "BMW", logo: bmwLogo },
+        { name: "BMW-M", logo: bmwMLogo },
+        { name: "Chevrolet", logo: chevroletLogo },
+        { name: "Ford", logo: fordLogo },
+        { name: "GMC", logo: gmcLogo },
+        { name: "Honda", logo: hondaLogo },
+        { name: "Hyundai", logo: hyundaiLogo },
+        { name: "Infiniti", logo: infinitiLogo },
+        { name: "Jeep", logo: jeepLogo },
+        { name: "Kia", logo: kiaLogo },
+        { name: "Lexus", logo: lexusLogo },
+        { name: "Mazda", logo: mazdaLogo },
+        { name: "Mercedes-Benz", logo: mercedesBenzLogo },
+        { name: "Mercedes-AMG", logo: mercedesAMGLogo },
+        { name: "Nissan", logo: nissanLogo },
+        { name: "Ram", logo: ramLogo },
+        { name: "Subaru", logo: subaruLogo },
+        { name: "Toyota", logo: toyotaLogo },
+        { name: "Volkswagen", logo: volkswagenLogo },
+        { name: "Volvo", logo: volvoLogo },
+    ];
 
   // Duplicate the array to create seamless infinite loop
     const duplicatedBrands = [...carBrands, ...carBrands]
