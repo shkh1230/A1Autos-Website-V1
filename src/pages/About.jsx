@@ -163,7 +163,7 @@ const AboutPage = () => {
                   className="rounded-lg w-full h-auto"
                 />
               </div>
-              <div className="absolute -bottom-10 -left-10 bg-primary text-white p-4 rounded-lg shadow-lg">
+              <div className="absolute -bottom-10 -left-10 bg-primary-dark text-white p-4 rounded-lg shadow-lg">
                 <p className="font-bold text-xl">Serving Garland since 2005</p>
               </div>
             </motion.div>

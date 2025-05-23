@@ -142,9 +142,11 @@ const FleetServices = () => {
         <div className="bg-red-600 text-white rounded-lg shadow-lg p-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Optimize Your Fleet?</h2>
           <p className="text-lg mb-6">Contact us to discuss a customized fleet maintenance program for your business.</p>
+          <Link to="/booking">
           <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-300">
             Schedule Consultation
           </button>
+          </Link >
         </div>
       </div>
     </div>

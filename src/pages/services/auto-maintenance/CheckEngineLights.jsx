@@ -143,9 +143,11 @@ const CheckEngineLights = () => {
         <div className="bg-red-600 text-white rounded-lg shadow-lg p-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Check Engine Light On?</h2>
           <p className="text-lg mb-6">Don't ignore warning lights. Schedule your diagnostic service today.</p>
+          <Link to="/booking">
           <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-300">
             Schedule Diagnostics
           </button>
+          </Link>
         </div>
       </div>
     </div>
