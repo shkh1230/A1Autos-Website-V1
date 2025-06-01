@@ -5,7 +5,7 @@ import About from './pages/About';
 import Booking from './pages/Booking';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
-import Services from './pages/services';
+import Services from './pages/Services';
 
 // Auto Care Services
 import SteeringSuspension from './pages/services/auto-care/SteeringSuspension';
