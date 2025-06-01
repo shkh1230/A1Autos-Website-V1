@@ -223,10 +223,10 @@ const Footer = () => {
                 <li className="flex items-center group">
                   <Mail className="h-5 w-5 text-red-600 mr-3 group-hover:scale-110 transition-transform duration-300" />
                   <a
-                      href="mailto:info@a1autos.com"
+                      href="mailto:a1autosgarland@gmail.com"
                       className="text-gray-400 hover:text-white transition-colors duration-300 border-b border-transparent hover:border-red-600"
                   >
-                    info@a1autos.com
+                    a1autosgarland@gmail.com
                   </a>
                 </li>
                 <li className="flex items-start group">

@@ -142,9 +142,11 @@ const OilChanges = () => {
         <div className="bg-red-600 text-white rounded-lg shadow-lg p-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready for an Oil Change?</h2>
           <p className="text-lg mb-6">Schedule your oil change service today for optimal engine performance.</p>
+          <Link to="/booking">
           <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-300">
             Schedule Service Now
           </button>
+          </Link>
         </div>
       </div>
     </div>

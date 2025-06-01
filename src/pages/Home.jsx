@@ -10,6 +10,7 @@ import TestimonialsSection from "../components/sections/TestimonialsSection"
 import CTASection from "../components/sections/CTASection"
 import ServiceFinder from "../components/common/ServiceFinder"
 import AutoShopBG from "/src/assets/images/auto-shop-bg.jpeg"
+import AutoShop from "/src/assets/videos/Intro.mp4"
 import {motion} from "framer-motion";
 import {MapPin} from "lucide-react";
 import {Link} from "react-router-dom";

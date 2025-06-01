@@ -143,9 +143,11 @@ const ExtendedWarranties = () => {
         <div className="bg-red-600 text-white rounded-lg shadow-lg p-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Protect Your Investment</h2>
           <p className="text-lg mb-6">Speak with our warranty specialists about the best coverage options for your vehicle.</p>
+          <Link to="/booking">
           <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-300">
             Get Coverage Details
           </button>
+          </Link>
         </div>
       </div>
     </div>

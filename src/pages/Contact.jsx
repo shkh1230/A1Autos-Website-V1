@@ -67,8 +67,8 @@ const Contact = () => {
         {
             icon: Mail,
             title: "Email Us",
-            description: "info@a1autos.com",
-            action: "mailto:info@a1autos.com",
+            description: "a1autosgarland@gmail.com",
+            action: "mailto:a1autosgarland@gmail.com",
             actionText: "Send Email"
         },
         {
