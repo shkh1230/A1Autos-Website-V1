@@ -6,30 +6,55 @@ import { TypeAnimation } from "react-type-animation"
 import { motion } from "framer-motion"
 import { Wrench, PenToolIcon as Tool, CheckCircle } from "lucide-react"
 
-const HeroSection = ({ backgroundImage, overlay = true }) => {
+const HeroSection = ({ backgroundImage, backgroundVideo, overlay = true }) => {
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
-    const img = new Image()
-    img.src = backgroundImage
-    img.onload = () => setLoaded(true)
-  }, [backgroundImage])
+    if (backgroundVideo) {
+      // For video, we'll set loaded to true immediately and let the video handle its own loading
+      setLoaded(true)
+    } else if (backgroundImage) {
+      const img = new Image()
+      img.src = backgroundImage
+      img.onload = () => setLoaded(true)
+    }
+  }, [backgroundImage, backgroundVideo])
 
   return (
     <div className="relative bg-secondary text-white py-32 md:py-48 z-0 overflow-hidden">
-      {/* Background image with fade-in effect */}
-      <div
-        className={`absolute inset-0 bg-cover bg-center bg-fixed ${
-          loaded ? "opacity-100" : "opacity-0"
-        }`}
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
-        {overlay && <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-secondary/70"></div>}
-      </div>
-
-        {/* Dark overlay - changed to neutral dark */}
+      {/* Background video or image */}
+      {backgroundVideo ? (
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              loaded ? "opacity-100" : "opacity-0"
+            }`}
+            onLoadedData={() => setLoaded(true)}
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {overlay && <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-secondary/70"></div>}
+        </div>
+      ) : backgroundImage ? (
+        <div
+          className={`absolute inset-0 bg-cover bg-center bg-fixed transition-opacity duration-1000 ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        >
+          {overlay && <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-secondary/70"></div>}
+           {/* Dark overlay - changed to neutral dark */}
         <div className="absolute inset-0 bg-gray-900/60"></div>
+        </div>
+      ) : null}
 
+      {/* Dark overlay - for better text readability */}
+      <div className="absolute inset-0 bg-gray-900/60"></div>
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
@@ -39,25 +64,24 @@ const HeroSection = ({ backgroundImage, overlay = true }) => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto text-center"
         >
-            <div className="text-4xl md:text-5xl font-bold mb-8">
-                <TypeAnimation
-                    sequence={[
-                        "Expert Auto Repair You Can Trust",
-                        1000,
-                        "Professional Car Maintenance",
-                        1000,
-                        "Quality Service Guaranteed",
-                        1000,
-                        "Your Trusted Auto Care Partner",
-                        1000,
-                    ]}
-                    wrapper="span"
-                    className="w-full whitespace-nowrap"
-                    speed={50}
-                    //style={{ display: 'inline-block' }}
-                    repeat={Infinity}
-                />
-            </div>
+          <div className="text-4xl md:text-5xl font-bold mb-8">
+            <TypeAnimation
+              sequence={[
+                "Expert Auto Repair You Can Trust",
+                1000,
+                "Professional Car Maintenance",
+                1000,
+                "Quality Service Guaranteed",
+                1000,
+                "Your Trusted Auto Care Partner",
+                1000,
+              ]}
+              wrapper="span"
+              className="w-full whitespace-nowrap"
+              speed={50}
+              repeat={Infinity}
+            />
+          </div>
           <p className="text-xl md:text-2xl mb-10 text-gray-200 leading-relaxed">
             Professional auto repair and maintenance services to keep your vehicle running at its best.
           </p>
