@@ -2,7 +2,6 @@ import { useState } from 'react';
 import {
     Wrench,
     Users,
-    Heart,
     GraduationCap,
     DollarSign,
     Clock,
@@ -19,23 +18,23 @@ const Careers = () => {
     const benefits = [
         {
             icon: DollarSign,
-            title: "Competitive Pay",
-            description: "Above industry average wages with performance bonuses"
+            title: "Fair Wages",
+            description: "Competitive hourly rates with opportunities for overtime pay"
         },
         {
-            icon: Heart,
-            title: "Health Benefits",
-            description: "Comprehensive medical, dental, and vision coverage"
+            icon: Wrench,
+            title: "Tool Support",
+            description: "Tool allowance and employee discounts on parts and services"
         },
         {
             icon: GraduationCap,
-            title: "Training & Development",
-            description: "Ongoing education and certification opportunities"
+            title: "Learn on the Job",
+            description: "Hands-on training with experienced technicians and certification support"
         },
         {
             icon: Clock,
-            title: "Work-Life Balance",
-            description: "Flexible scheduling and paid time off"
+            title: "Steady Schedule",
+            description: "Consistent Monday-Saturday schedule with Sundays off"
         }
     ];
 
@@ -230,9 +229,12 @@ const Careers = () => {
                                                         </ul>
                                                     </div>
 
-                                                    <button className="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-red-700 transition-colors duration-300">
+                                                    <a
+                                                        href={`mailto:a1autosgarland@gmail.com?subject=Application for ${job.title} Position&body=Hello A-1 Autos Team,%0D%0A%0D%0APlease find my resume attached for the ${job.title} position.%0D%0A%0D%0APosition applying for: ${job.title}%0D%0A%0D%0AThank you for your consideration.%0D%0A%0D%0ABest regards`}
+                                                        className="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-red-700 transition-colors duration-300 text-center block"
+                                                    >
                                                         Apply for This Position
-                                                    </button>
+                                                    </a>
                                                 </div>
                                             </>
                                         );
@@ -266,8 +268,8 @@ const Careers = () => {
                                     <Mail className="w-6 h-6" />
                                 </div>
                                 <p className="font-semibold">Email Resume</p>
-                                <a href="mailto:careers@a1autos.com" className="text-red-400 hover:text-red-300">
-                                    careers@a1autos.com
+                                <a href="mailto:a1autosgarland@gmail.com" className="text-red-400 hover:text-red-300">
+                                    a1autosgarland@gmail.com
                                 </a>
                             </div>
 
