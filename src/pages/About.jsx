@@ -8,6 +8,13 @@ import { Button } from "../components/ui/Button"
 // Import team member images
 import OwnerImage from "../assets/images/GoogleIcon.png" // This is a placeholder, replace with actual image
 import TechnicianImage from "../assets/images/GoogleIcon.png" // This is a placeholder, replace with actual image
+import A1AutoFacility from "../assets/images/a1autofacility.png"
+import A1AutoShop from "../assets/images/a1autoshop.png"
+import A1AutoBay from "../assets/images/a1autobay.png"
+import A1AutoDiagnostic from "../assets/images/diagnostic-equipment.png"
+import A1AutoServiceBay from "../assets/images/servicebay.png"
+import A1AutoCommunity from "../assets/images/community.png"
+
 
 const AboutPage = () => {
   // Animation variants
@@ -127,7 +134,7 @@ const AboutPage = () => {
               <div className="w-20 h-1 bg-primary mb-6 rounded-full"></div>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  A-1 Autos was founded in 2005 by Kamran Ahmed, a master technician with a passion for cars and a
+                  A-1 Autos was revised in 2018 by Kamran Khan, a master technician with a passion for cars and a
                   vision for a different kind of auto repair experience. After years of working in dealerships and
                   repair shops, Kamran saw an opportunity to create a business built on honesty, technical excellence,
                   and customer service.
@@ -138,7 +145,7 @@ const AboutPage = () => {
                   through referrals from satisfied customers.
                 </p>
                 <p>
-                  In 2012, we expanded to our current location on Broadway Boulevard, allowing us to serve more
+                  In 2018, we expanded to our current location on Broadway Boulevard, allowing us to serve more
                   customers and offer a wider range of services. Today, our team includes ASE-certified technicians with
                   expertise in all makes and models, from domestic to foreign vehicles.
                 </p>
@@ -158,13 +165,13 @@ const AboutPage = () => {
             >
               <div className="bg-white p-2 shadow-xl rounded-lg rotate-3 transform hover:rotate-0 transition-transform duration-300 border-2 border-primary/20">
                 <img
-                  src="/placeholder.svg?height=400&width=600"
+                  src={A1AutoFacility}
                   alt="A-1 Autos Shop"
                   className="rounded-lg w-full h-auto"
                 />
               </div>
               <div className="absolute -bottom-10 -left-10 bg-primary-dark text-white p-4 rounded-lg shadow-lg">
-                <p className="font-bold text-xl">Serving Garland since 2005</p>
+                <p className="font-bold text-xl">Serving Garland since 2018</p>
               </div>
             </motion.div>
           </div>
@@ -207,7 +214,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Meet Our Team Section */}
+      {/* Meet Our Team Section
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -259,6 +266,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Our Facility Section */}
       <section className="py-20 bg-gradient-to-br from-gray-100 to-white">
@@ -322,21 +330,21 @@ const AboutPage = () => {
             >
               <div className="col-span-2">
                 <img
-                  src="/placeholder.svg?height=300&width=600"
+                  src={A1AutoShop}
                   alt="A-1 Autos Facility"
                   className="rounded-lg shadow-md w-full h-auto border-2 border-primary/20"
                 />
               </div>
               <div>
                 <img
-                  src="/placeholder.svg?height=200&width=300"
+                  src={A1AutoServiceBay}
                   alt="Service Bay"
                   className="rounded-lg shadow-md w-full h-auto border-2 border-primary/20"
                 />
               </div>
               <div>
                 <img
-                  src="/placeholder.svg?height=200&width=300"
+                  src={A1AutoDiagnostic}
                   alt="Diagnostic Equipment"
                   className="rounded-lg shadow-md w-full h-auto border-2 border-primary/20"
                 />
@@ -386,7 +394,7 @@ const AboutPage = () => {
               transition={{ duration: 0.5 }}
             >
               <img
-                src="/placeholder.svg?height=400&width=600"
+                src={A1AutoCommunity}
                 alt="Community Event"
                 className="rounded-lg shadow-xl w-full h-auto border-2 border-primary/30"
               />
@@ -421,15 +429,11 @@ const AboutPage = () => {
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <Heart className="h-5 w-5 text-primary mr-2" />
-                    <span>Garland Food Bank</span>
+                    <span>Islamic Society Of Mesquite</span>
                   </li>
                   <li className="flex items-center">
                     <Heart className="h-5 w-5 text-primary mr-2" />
                     <span>Garland Youth Sports Association</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Heart className="h-5 w-5 text-primary mr-2" />
-                    <span>Garland Technical Institute</span>
                   </li>
                 </ul>
               </div>
@@ -542,7 +546,7 @@ const AboutPage = () => {
                 <Button variant="default" size="lg">
                   Schedule Service
                 </Button>
-              </Link>
+              </Link> f
               <Link to="/contact">
                 <Button
                   variant="default"

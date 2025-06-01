@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
 
 const serviceCategories = {
   'AUTO CARE': [
@@ -36,6 +36,7 @@ const serviceCategories = {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const navigate = useNavigate();
 
   const formatServiceUrl = (service) => {
@@ -45,6 +46,12 @@ const Navbar = () => {
   const handleServicesClick = () => {
     navigate('/services');
     setIsServicesOpen(false);
+  };
+
+  const handleMobileServiceClick = (serviceUrl) => {
+    setIsOpen(false);
+    setIsMobileServicesOpen(false);
+    navigate(serviceUrl);
   };
 
   return (
@@ -61,7 +68,7 @@ const Navbar = () => {
               <span className="text-2xl md:text-3xl ml-1 text-gray-800 font-black tracking-wider uppercase">
                 Autos
               </span>
-              <span className="hidden md:block ml-2 text-sm text-gray-500 font-normal italic">
+              <span className="block ml-2 text-xs md:text-sm text-gray-500 font-normal italic">
                 Excellence in Auto Care
               </span>
             </span>
@@ -136,7 +143,7 @@ const Navbar = () => {
               <Link to="/careers" className="nav-link hover:text-red-600 transition-colors duration-200">
                 Careers
               </Link>
-              <button className="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors duration-300">
+              <button className="bg-red-600 border-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 border-red-700 transition-colors duration-300">
                 <Link to="/booking" className="block w-full h-full">
                   Schedule Service
                 </Link>
@@ -153,7 +160,7 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           {isOpen && (
-              <div className="md:hidden py-4">
+              <div className="md:hidden py-4 border-t border-gray-200">
                 <Link
                     to="/"
                     className="block py-2 text-gray-700 hover:text-red-600 transition-colors duration-200"
@@ -161,13 +168,54 @@ const Navbar = () => {
                 >
                   Home
                 </Link>
-                <Link
-                    to="/services"
-                    className="block py-2 text-gray-700 hover:text-red-600 transition-colors duration-200"
-                    onClick={() => setIsOpen(false)}
-                >
-                  Services
-                </Link>
+
+                {/* Mobile Services Dropdown */}
+                <div>
+                  <button
+                      onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                      className="w-full flex items-center justify-between py-2 text-gray-700 hover:text-red-600 transition-colors duration-200"
+                  >
+                    Services
+                    {isMobileServicesOpen ?
+                        <ChevronUp className="h-4 w-4" /> :
+                        <ChevronDown className="h-4 w-4" />
+                    }
+                  </button>
+
+                  {isMobileServicesOpen && (
+                      <div className="pl-4 py-2 bg-gray-50 rounded-lg mt-2">
+                        <Link
+                            to="/services"
+                            className="block py-2 text-sm text-red-600 font-semibold hover:text-red-700"
+                            onClick={() => handleMobileServiceClick('/services')}
+                        >
+                          View All Services
+                        </Link>
+
+                        {Object.entries(serviceCategories).map(([category, services]) => (
+                            <div key={category} className="mt-3">
+                              <h4 className="text-sm font-bold text-gray-800 mb-2 border-b border-red-200 pb-1">
+                                {category}
+                              </h4>
+                              <ul className="space-y-1">
+                                {services.map((service) => (
+                                    <li key={service}>
+                                      <Link
+                                          to={`/services/${formatServiceUrl(service)}`}
+                                          className="block py-1 text-sm text-gray-600 hover:text-red-600 hover:bg-red-50 px-2 rounded transition-colors duration-200"
+                                          onClick={() => handleMobileServiceClick(`/services/${formatServiceUrl(service)}`)}
+                                      >
+                                        {service}
+                                      </Link>
+                                    </li>
+                                ))}
+                              </ul>
+                            </div>
+                        ))}
+                      </div>
+                  )}
+                </div>
+
                 <Link
                     to="/about"
                     className="block py-2 text-gray-700 hover:text-red-600 transition-colors duration-200"

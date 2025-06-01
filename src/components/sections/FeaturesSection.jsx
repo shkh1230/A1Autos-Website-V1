@@ -40,7 +40,6 @@ const FeaturesSection = () => {
   return (
     <section className="bg-gray-50 py-24 relative">
       {/* Diagonal top edge */}
-      <div className="absolute top-0 left-0 right-0 h-16 bg-auto-pattern transform -translate-y-full clip-path-diagonal"></div>
 
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
